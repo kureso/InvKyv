@@ -10,7 +10,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 
-\usepackage[english]{babel}
+\usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 
 \usepackage{multicol}
@@ -86,32 +86,61 @@
 %   \tableofcontents
 % \end{frame}
 
-\section*{Úvod}
+\section*{Inverzné Kyvadlo}
 \label{sec: Int}
 
 
 \begin{frame}
  
- \frametitle{Úvod}
- \begin{center}
- Cart and pole apparatus, tiltmeter, Kapitza's pendulum.\\    
- Newtonovský pohľad, Lagrangeov pohľad.\\
- Mathieuho rovnica.\\
- Perturbačná metóda určenia hraníc, $\alpha(\beta)$ \\
- \end{center}
+\frametitle{Inverzné Kyvadlo}
 
- \begin{equation*}
-\mathcal{L}=_{def}T-V=\frac{1}{2}m(l^2(\frac{d\theta}{dt})^2+(\frac{d\xi}{dt})^2+2l\sin\theta(\frac{d\xi}{dt})(\frac{d\theta}{dt}))-mg(\xi-lcos{\theta})
- \end{equation*}
 
- \begin{equation*}
- -\frac{d}{dt}(\frac{\partial\mathcal{L}}{\partial\dot{q_{i}}})+ \frac{\partial\mathcal{L}}{\partial{}q_{i}}=0
- \end{equation*}
- 
- \begin{equation*}
- \frac{\mathrm{d^2\theta} }{\mathrm{d} t^2}+(\frac{g}{l}-\frac{A{\Omega}^2}{l}cos{\Omega t})\theta=0
- \end{equation*}
- 
+\begin{center}
+Cart and pole apparatus, tiltmeter, Kapitza's pendulum.\\    
+Lagrangeov pohľad.\\
+\end{center}
+\begin{small}
+\begin{align*}
+\mathcal{L} & \stackrel{\text{def}}{=} T-V  \\
+\mathcal{L} & =  \frac{1}{2} m \left( l^{2} \left( \frac{\mathrm{d}\theta}{\mathrm{d}t}\right)^{2}+\left( \frac{\mathrm{d}\xi}{\mathrm{d}t}\right)^{2}+2l \sin \theta \frac{\mathrm{d}\xi}{\mathrm{d}t}  \frac{\mathrm{d}\theta}{\mathrm{d}t} \right) -mg \left( \xi-l \cos \theta \right) \\
+\end{align*}
+Pohybová rovnice:
+\begin{align*}
+ -\frac{\mathrm{d}}{\mathrm{d}t} \left(  \frac{\partial\mathcal{L}}{\partial\dot{q_{i}}} \right) + \frac{\partial\mathcal{L}}{\partial q_{i}}  & = 0 \\
+\frac{\mathrm{d}^{2}\theta}{\mathrm{d} t^{2}}+\left(  \frac{g}{l}-\frac{A \Omega^{2}}{l} \cos \Omega t \right)   \sin \theta &= 0 \\
+\end{align*}
+\end{small}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Inverzné Kyvadlo}
+\begin{center}
+Mathieuho rovnica.\\
+Perturbačná metóda určenia hraníc, $\alpha, \beta$.\\
+\end{center}
+
+\begin{small}
+Linearizovaná rovnice:
+\begin{equation*}
+\frac{\mathrm{d}^{2}\theta}{\mathrm{d} t^{2}}+\left(  \frac{g}{l}-\frac{A \Omega^{2}}{l} \cos \Omega t \right)   \theta =0
+\end{equation*}
+Přeznačení - parametry:
+\begin{align*}
+t^{\star} & \stackrel{\text{def}}{=} \Omega t \\
+\alpha & \stackrel{\text{def}}{=} \frac{\omega^{2}_{0}}{\Omega^{2}} \\
+\beta & \stackrel{\text{def}}{=} -\frac{A}{l} \\
+\end{align*}
+Mathieu rovnica:
+\begin{equation*}
+\frac{\mathrm{d}^{2}\theta^{\star}}{\mathrm{d} t^{\star}^{2}}+\left( \alpha + \beta \cos t^{\star} \right)   \theta^{\star} =0
+\end{equation*}
+
+\end{small}
+
+
+
 \end{frame}
  
 
@@ -119,18 +148,26 @@
 \label{sec:Záver}
 
 \begin{frame}
-\frametitle{Záver}
+\frametitle{Inverzné Kyvadlo}
 
 
 \begin{figure}
 \includegraphics[scale=0.45]{Boundary-graph.png}
 \end{figure}
-Ak sú hodnoty parametrov $\alpha$ a $\beta$ z tmavej oblasti so stredom v bode $\alpha=\frac{1}{4}$, potom môže byť kyvadlo destabilizované osciláciou pivotu.
-Pre vhodne zvolené hodnoty parametrov $\alpha$, $\beta$ dosiahneme stabilizáciu kyvadla v hornej časti, teda hodnoty týchto parametrov sa nachádzajú na grafe v bielej oblasti. Nutnou podmienkou stability je vhodne zvolená frekvencia kmitov pivotu:
- 
+
+\begin{small}
+
+\begin{itemize}
+\item Ak sú hodnoty parametrov $\alpha$ a $\beta$ z tmavej oblasti so stredom v bode $\alpha=\frac{1}{4}$, potom môže byť kyvadlo destabilizované osciláciou pivotu.
+\item Pre vhodne zvolené hodnoty parametrov $\alpha$, $\beta$ dosiahneme stabilizáciu kyvadla v hornej časti pri splnenej nutnej podmienke stability (pri zápornom $\alpha$):
+\end{itemize}
+
 \begin{equation*}
 \frac{A}{l}\frac{\Omega}{\omega_0}\geq \sqrt{2}.
 \end{equation*}  
+\end{small}
+
+
  
 
 \end{frame}
